@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		%svelte.head%
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Behavioral Analytics for Virtual Mental Healthcare Providers | Sahha</title>
+		<meta content="Sahha connects behavioral data with mental health through a simple but powerful API platform"
+		  name="description">
+		<meta content="Behavioral Analytics for Virtual Mental Healthcare Providers | Sahha" property="og:title">
+		<meta content="Sahha connects behavioral data with mental health through a simple but powerful API platform"
+		  property="og:description">
+		<meta content="https://i.imgur.com/QwH9otA.png" property="og:image">
+		<meta content="Behavioral Analytics for Virtual Mental Healthcare Providers | Sahha" property="twitter:title">
+		<meta content="Sahha connects behavioral data with mental health through a simple but powerful API platform"
+		  property="twitter:description">
+		<meta content="https://i.imgur.com/QwH9otA.png" property="twitter:image">
+		<meta property="og:type" content="website">
+		<meta content="summary_large_image" name="twitter:card">
+		<meta content="google-site-verification=WVtTHUxUBKtPRijEeovp3zSn4XUdH1RNMxEpUhegIV4" name="google-site-verification">
+		<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800;900&display=swap"
+		rel="stylesheet">
+		<link rel='icon' type='image/png' href='favicon.png'>
+	  
+		<script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/shell.js"></script>
+		<script>
+		  hbspt.forms.create({
+			region: "na1",
+			portalId: "20986870",
+			formId: "fa19169b-f56d-4809-9c2a-e0461eba6600"
+		});
+		</script>
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-36258SM7HB"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag() { dataLayer.push(arguments); }
+		  gtag('js', new Date());
+	  
+		  gtag('config', 'G-36258SM7HB');
+		</script>
+	  </head>
+	<body id="app">
+
+		<div id="svelte">%svelte.body%</div>
+	  <!-- <div class="bg-gray-200 h-32 h-48"> HELLOS</div> -->
+	  	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/ScrollTrigger.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/TextPlugin.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/EasePack.min.js"></script>	
+		
+		<script>
+		gsap.defaults({ease: "power3"});
+
+		var t1 = gsap.timeline({defaults:{duration: 1}})
+		var t2 = gsap.timeline({repeat: 1, yoyo: true, repeatDelay:1})
+
+		t1.from('.heroContent_ellipse', {duration:.5, scale:-0.3, transformOrigin:'50% 50%' ,ease:'power3'}, 0)
+		.from(".hero-text", { opacity: 0, y: 40})
+		.from(".hero-img", { opacity: 0, y: 40}, ".7")
+
+		//scroll trigger 
+
+		</script>
+		
+	  </body>
+</html>

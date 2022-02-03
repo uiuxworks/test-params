@@ -1,0 +1,100 @@
+/* Write your global styles here, in PostCSS syntax */
+/* Injects Tailwind's base styles & any base styles registered by plugins. */
+@tailwind base;
+
+@layer base {
+	/* custom CSS goes here */
+}
+
+/* Injects Tailwind's component classes & any component classes registered by plugins. */
+@tailwind components;
+
+@layer components {
+	/* custom CSS goes here */
+}
+
+/* Injects Tailwind's utility classes & any utility classes registered by plugins. */
+@tailwind utilities;
+
+@layer utilities {
+	/* custom CSS goes here */
+}
+
+.bg-sahha {
+	background-color: #333242;
+}
+
+.heroContent_ellipse {
+	position: absolute;
+	bottom: 0;
+	left: 20px;
+	/* transform: translateY(50); */
+	z-index: 0;
+	background: rgb(179 130 236 / 0.1);
+	width: 1500px;
+	border-radius: 100%;
+}
+
+.heroContent_ellipse::before {
+	content: '';
+	display: block;
+	padding-top: 100%;
+}
+
+.card {
+	@apply rounded-md bg-white;
+	box-shadow: 0px 3px 4px 0px hsla(0, 0%, 0%, 0.04);
+	border: 1px solid hsla(0, 8%, 93%, 1)
+}
+.card.dark{
+ 	@apply bg-sahha-800 rounded-xl border-none shadow-none;
+}
+
+.blip {
+	stroke-dasharray: 1000;
+	stroke-dashoffset: 1000;
+	/* stroke-dasharray: "10 20 57 40";  */
+	animation: blip-animate 4s linear;
+	animation-fill-mode: forwards;
+	stroke-width: 4px;
+	stroke: #e8e1fe;
+	fill: transparent;
+}
+
+@keyframes blip-animate {
+	to {
+		stroke-dashoffset: 0;
+	}
+	/* 40%{
+            stroke-dashoffset: 300;
+        }
+        80%{
+            stroke-dashoffset: 900;
+        }
+        100%{
+            stroke-dashoffset: 1200;
+            fill: #e8e1fe;
+        } */
+}
+
+#icon g {
+	opacity: 0;
+	animation: dropIn 4s;
+	animation-timing-function: ease;
+	animation-fill-mode: forwards;
+	animation-delay: calc(var(--order) * 200ms);
+	animation-iteration-count: 1;
+}
+
+@keyframes dropIn {
+	20% {
+		opacity: 0;
+		transform: translateY(-10%);
+	}
+
+	30%,
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}

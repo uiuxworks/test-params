@@ -1,0 +1,30 @@
+{
+	"name": "sahha-lp-svelte",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "svelte-kit dev --host",
+		"build": "svelte-kit build",
+		"preview": "svelte-kit preview",
+		"lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. .",
+		"format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. ."
+	},
+	"devDependencies": {
+		"@beyonk/svelte-carousel": "^2.9.0",
+		"@beyonk/svelte-hubspot": "^0.4.1",
+		"@sveltejs/adapter-netlify": "^1.0.0-next.38",
+		"@sveltejs/adapter-node": "^1.0.0-next.61",
+		"@sveltejs/adapter-static": "^1.0.0-next.26",
+		"@sveltejs/kit": "next",
+		"autoprefixer": "^10.4.2",
+		"cssnano": "^5.0.15",
+		"postcss": "^8.4.5",
+		"postcss-load-config": "^3.1.1",
+		"prettier": "^2.5.1",
+		"prettier-plugin-svelte": "^2.6.0",
+		"prismjs": "^1.26.0",
+		"svelte": "^3.46.2",
+		"svelte-preprocess": "^4.10.1",
+		"tailwindcss": "^3.0.15"
+	},
+	"type": "module"
+}
