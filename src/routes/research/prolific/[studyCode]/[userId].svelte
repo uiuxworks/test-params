@@ -1,19 +1,10 @@
 <script>
+	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
-	let studyCode = $page.params.studyCode;
-	let userId = $page.params.userId;
-	console.log(studyCode);
-	console.log(userId);
-	var dynamicValue = '';
-	if (studyCode && userId) {
-		console.log('woohoo');
-		dynamicValue = '?studyCode=' + studyCode + '&userId=' + userId;
-	}
-	let escapedValue = escape(dynamicValue);
-	let href =
-		'https://sahhahealth.page.link/?link=https://sahha.ai/research' +
-		escapedValue +
-		'&isi=1592241897&ibi=com.sahha.ios&apn=com.sahha.android';
+
+	let studyCode = '';
+	let userId = '';
+	let href = '';
 
 	// navbar
 	const classCurrent = 'bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium';
@@ -26,6 +17,23 @@
 		'text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium';
 
 	let expanded = false;
+
+	onMount(() => {
+		studyCode = $page.params.studyCode;
+		userId = $page.params.userId;
+		console.log(studyCode);
+		console.log(userId);
+		var dynamicValue = '';
+		if (studyCode && userId) {
+			console.log('woohoo');
+			dynamicValue = '?studyCode=' + studyCode + '&userId=' + userId;
+		}
+		let escapedValue = escape(dynamicValue);
+		href =
+			'https://sahhahealth.page.link/?link=https://sahha.ai/research' +
+			escapedValue +
+			'&isi=1592241897&ibi=com.sahha.ios&apn=com.sahha.android';
+	});
 </script>
 
 <!-- navbar    -->
