@@ -25,7 +25,7 @@
 						<div class="hero-text">
 							<div class="mt-6 sm:max-w-xl">
 								<h1 class="md:text-4xl text-2xl font-bold text-white tracking-tight sm:text-4xl">
-									Ditch the surveys
+									Ditch the surveys test
 								</h1>
 								<p class="lg:mt-2 mt-2 md:text-lg text-md text-gray-300">
 									What if you could assess the mental health of 100% of your users without ever asking a question?
